@@ -1,9 +1,9 @@
 (function () {
-    'use strict';
+    "use strict";
     function BrainCandyDetailsCtrl(CandyDAO, $routeParams) {
         var ctrl = this;
         CandyDAO.get($routeParams.id).then(function (data) {
-              if(data !=0 ){
+              if(data !==0 ){
                   ctrl.details = data;
               }
         });
@@ -16,6 +16,6 @@
         };
     }
 
-    var module = angular.module('exerciseApp');
-    module.controller("BrainCandyDetailsCtrl", ['CandyDAO', '$routeParams', BrainCandyDetailsCtrl]);
+    var module = angular.module("exerciseApp");
+    module.controller("BrainCandyDetailsCtrl", ["CandyDAO", "$routeParams", BrainCandyDetailsCtrl]);
 })();

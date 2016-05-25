@@ -6,12 +6,12 @@
             query: {
                 isArray: false
             }
-        })
-        var sentence = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat';
+        });
+        //var sentence = 'Lorem ipsum dolor sit amet, consectetur ';
 
         return {
             query: function () {
-                return api.query().$promise
+                return api.query().$promise;
             },
             get: function (id) {
                 return api.get({a: id}).$promise;
@@ -26,5 +26,5 @@
         };
     }
 
-    angular.module('exerciseApp').factory('CandyDAO', ['$resource', CandyDAO]);
+    angular.module("exerciseApp").factory("CandyDAO", ["$resource", CandyDAO]);
 })();
